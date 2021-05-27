@@ -26,7 +26,7 @@ int is_palindrome(listint_t **head)
 		i++;
 	}
 	k = i - 1
-	for (j = 0,; j < (i / 2); j++, k--)
+	for (j = 0; j < (i / 2); j++, k--)
 	{
 		if (array[j] != array[k])
 			return (0);
