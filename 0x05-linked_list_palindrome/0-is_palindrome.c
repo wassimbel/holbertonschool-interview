@@ -11,23 +11,22 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int array[1000];
+	int array[10000];
 	int i = 0, j = 0, k = 0;
-
-	current = *head;
 
 
 	if (*head == NULL)
 		return (1);
 
+	current = *head;
 	while (current != NULL)
 	{
 		array[i] = current->n;
 		current = current->next;
 		i++;
 	}
-	k = i - 1;
-	for (j = 0; j < (i / 2); j++, k--)
+
+	for (j = 0, k = i - 1; j < (i / 2); j++, k--)
 	{
 		if (array[j] != array[k])
 			return (0);
