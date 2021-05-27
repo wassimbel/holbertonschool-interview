@@ -11,7 +11,8 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int left[1000], right[1000], i, j, k;
+	int array[1000];
+	int i = 0, j = 0, k = 0;
 
 	current = *head;
 
@@ -19,24 +20,16 @@ int is_palindrome(listint_t **head)
 	if (*head == NULL)
 		return (1);
 
-	while (current->next != NULL)
+	while (current != NULL)
 	{
-		left[i] = current->n;
+		array[i] = current->n;
 		current = current->next;
 		i++;
 	}
-
-	left[i] = current->n;
-	k = i + 1;
-
-	for (; j < k; j++, i--)
+	k = i - 1;
+	for (j = 0; j < (i / 2); j++, k--)
 	{
-		right[j] = left[i];
-	}
-
-	for (i = 0; i < k; i++)
-	{
-		if (left[i] != right[i])
+		if (array[j] != array[k])
 			return (0);
 	}
 	return (1);
