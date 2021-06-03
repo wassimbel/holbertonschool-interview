@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-    """  reads stdin line by line and computes metrics """
+"""reads stdin line by line and computes metrics """
 
 
 import sys
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     i = 0
     file_size = 0
 
- try:
+    try:
         for j in sys.stdin:
             i += 1
             metrics = j.split()
@@ -41,7 +41,7 @@ if __name__ == '__main__':
                     status_code[status] += 1
             except:
                 pass
-            if count % 10 == 0:
+            if i % 10 == 0:
                 print_metrics()
         print_metrics()
     except KeyboardInterrupt:
