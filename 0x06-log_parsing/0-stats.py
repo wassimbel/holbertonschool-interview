@@ -42,6 +42,6 @@ if __name__ == '__main__':
             if i == 10:
                 print_metrics()
                 i = 0
-        print_metrics()
     except KeyboardInterrupt:
         print_metrics()
+        
