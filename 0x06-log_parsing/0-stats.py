@@ -27,7 +27,7 @@ if __name__ == '__main__':
     i = 0
     file_size = 0
 
-    try:
+ try:
         for j in sys.stdin:
             i += 1
             metrics = j.split()
@@ -41,9 +41,9 @@ if __name__ == '__main__':
                     status_code[status] += 1
             except:
                 pass
-            if i == 10:
+            if count % 10 == 0:
                 print_metrics()
-                i = 0
+        print_metrics()
     except KeyboardInterrupt:
         print_metrics()
-        
+        raise
