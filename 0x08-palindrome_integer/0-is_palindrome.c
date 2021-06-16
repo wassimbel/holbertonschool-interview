@@ -23,20 +23,10 @@ int is_palindrome(unsigned long n)
 
 	if (len == 1)
 		return (1);
-	if (len % 2 == 0)
+	for (i = 0; i < (len - 1) / 2; i++, j--)
 	{
-		for (i = 0; i <= (len - 1) / 2; i++, j--)
-		{
-			if (array[i] == array[j])
-				return (1);
-		}
+		if (array[i] != array[j])
+			return (0);
 	}
-	j = len - 1;
-
-	for (i = 0; i <= (len - 2) / 2; i++, j--)
-	{
-		if (array[i] == array[j])
-			return (1);
-	}
-	return (0);
+	return (1);
 }
