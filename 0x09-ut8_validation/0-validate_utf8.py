@@ -2,7 +2,8 @@
 
 
 def validUTF8(data):
-    for i in data:
-        if i > 127 or i < -128:
-            return False
-    return True
+    try:
+        bytes(data).decode("UTF-8")
+        return True
+    except ValueError as e:
+        return False
