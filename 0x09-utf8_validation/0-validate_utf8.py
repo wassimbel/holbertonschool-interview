@@ -12,7 +12,7 @@ def validUTF8(data):
             while i & bit_mask:
                 ones += 1
                 bit_mask >>= 1
-            if ones > 4:
+            if ones == 1 or ones > 4:
                 return False
         elif i >> 6 != 2:
             return False
