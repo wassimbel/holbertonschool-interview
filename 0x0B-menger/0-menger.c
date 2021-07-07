@@ -23,8 +23,8 @@ void menger(int level)
 			{
 				if (x % 3 == 1 && y % 3 == 1)
 					c = ' ';
-				x /= num;
-				y /= num;
+				x /= 3;
+				y /= 3;
 			}
 			putchar(c);
 		}
