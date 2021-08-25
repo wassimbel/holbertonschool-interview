@@ -1,6 +1,21 @@
 #include "search_algos.h"
 
 /**
+ * advanced_binary -  searches for a value in a sorted array of integers.
+ * @array: pointer to first element
+ * @size: size of the array
+ * @value: value to search for
+ * Return: returns index of value or -1 on failure
+ **/
+
+int advanced_binary(int *array, size_t size, int value)
+{
+	if (!array || size == 0)
+		return (-1);
+	return (recursion_search(array, 0, size - 1, value));
+}
+
+/**
  * print_array - prints a given array of ints
  * @array: pointer to first element
  * @start: index of first element
@@ -48,19 +63,4 @@ int recursion_search(int *array, int start, int end, int value)
 			return (recursion_search(array, mid + 1, end, value));
 	}
 	return (-1);
-}
-
-/**
- * advanced_binary -  searches for a value in a sorted array of integers.
- * @array: pointer to first element
- * @size: size of the array
- * @value: value to search for
- * Return: returns index of value or -1 on failure
- **/
-
-int advanced_binary(int *array, size_t size, int value)
-{
-        if (!array || size == 0)
-                return (-1);
-        return (recursion_search(array, 0, size - 1, value));
 }
