@@ -5,5 +5,6 @@
 
 int advanced_binary(int *array, size_t size, int value);
 void print_array(int *array, int start, int end);
-int recursion_Search(int *array, int start, int end, int value);
+int recursion_search(int *array, int start, int end, int value);
+
 #endif /* _SEARCH_ALGOS_H */
