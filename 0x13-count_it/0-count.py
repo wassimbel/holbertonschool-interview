@@ -3,15 +3,14 @@ import requests
 
 
 def recursive_search(subreddit, word_list, titles, after=""):
-    """ecursive function that queries the Reddit API, parses the title of all hot articles, and prints a sorted count
+    """ecursive function that queries the Reddit API,
+       parses the title of all hot articles, and prints a sorted count
        of given keywords (case-insensitive, delimited by spaces """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     header = {'User-Agent': 'Reddit API'}
-  
     request = requests.get(url,
-                       headers = header,
-                       allow_redirects=False)
-
+                           headers=header,
+                           allow_redirects=False)
     if request.status_code != 200:
         return None
     if after is None:
