@@ -12,7 +12,7 @@ def recursive_search(subreddit, word_list, titles, after=""):
     params = {'limit': 200, 'after': after}
     request = requests.get(url,
                            headers=header,
-                           allow_redirects=False
+                           allow_redirects=False,
                            params=params)
     if request.status_code != 200:
         return None
