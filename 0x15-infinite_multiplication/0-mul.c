@@ -43,6 +43,7 @@ int check_error(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
+	size_t l;
 	int len1, len2, i, j, k, x, carry;
 	int *num;
 
@@ -51,7 +52,8 @@ int main(int argc, char **argv)
 	len2 = strlen(argv[2]);
 	if (argv[1][0] == '0' || argv[2][0] == '0')
 	{
-		_putchar('0');
+		for (l = 0; l < strlen(argv[1]); l++)
+			_putchar('0');
 		_putchar('\n');
 		return (1);
 	}
