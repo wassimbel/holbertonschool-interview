@@ -74,6 +74,9 @@ int main(int argc, char **argv)
 	k = num[0];
 	if (k == 0)
 		k = 1;
+	else
+		k = 0;
+
 	for (; k < len1 + len2; k++)
 		printf("%d", num[k]);
 	printf("\n");
