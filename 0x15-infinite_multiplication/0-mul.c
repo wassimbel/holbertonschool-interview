@@ -43,7 +43,7 @@ int check_error(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
-	int len1, len2, i, j, k, x, carry;
+	int len1, len2, i, j, k, l, x, carry;
 	int *num;
 
 	check_error(argc, argv);
@@ -51,7 +51,17 @@ int main(int argc, char **argv)
 	len2 = strlen(argv[2]);
 	if (argv[1][0] == '0' || argv[2][0] == '0')
 	{
-		printf("0\n");
+		if (len1 > len2)
+		{
+			for (l = 0; l < len1; l++)
+				_putchar(argv[1][l]);
+		}
+		else
+		{
+			for (l = 0; l < len2; l++)
+				_putchar(argv[2][l]);
+		}
+		_putchar('\n');
 		return (1);
 	}
 	num = calloc(len1 + len2, sizeof(*num));
