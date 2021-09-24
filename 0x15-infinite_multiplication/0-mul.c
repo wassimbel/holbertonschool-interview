@@ -43,7 +43,6 @@ int check_error(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
-	size_t l;
 	int len1, len2, i, j, k, x, carry;
 	int *num;
 
