@@ -52,9 +52,7 @@ int main(int argc, char **argv)
 	len2 = strlen(argv[2]);
 	if (argv[1][0] == '0' || argv[2][0] == '0')
 	{
-		for (l = 0; l < strlen(argv[1]); l++)
-			_putchar('0');
-		_putchar('\n');
+		printf("0\n");
 		return (1);
 	}
 	num = calloc(len1 + len2, sizeof(*num));
