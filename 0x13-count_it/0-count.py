@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Get request """
-import requests
 
 
 def recursive_search(subreddit, word_list, titles, after=""):
